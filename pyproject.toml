@@ -1,0 +1,22 @@
+[project]
+name = "order"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Lin Kuai",email = "guilin0927@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.13,<4.0"
+dependencies = [
+    "fastapi[standard] (>=0.124.4,<0.125.0)",
+    "pymongo (>=4.15.5,<5.0.0)",
+    "httpx (>=0.28.1,<0.29.0)",
+    "aio-pika (>=9.5.8,<10.0.0)"
+]
+
+[tool.poetry]
+packages = [{include = "order", from = "src"}]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
