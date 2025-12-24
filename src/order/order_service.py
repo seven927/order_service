@@ -37,6 +37,6 @@ class OrderService:
         
 
         result = await self.repo.place_order(inventory_id, product_id, count)
-        await self.queue.addPlacedOrder(result)
+        await self.queue.addPlacedOrder(result, product_id, count)
         return result
 
